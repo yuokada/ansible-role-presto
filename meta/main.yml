@@ -2,7 +2,7 @@ galaxy_info:
   # see: https://galaxy.ansible.com/docs/contributing/creating_role.html
   role_name: presto
   author: yukihiro Okada
-  description: Ansible Role to install presto-server-rpm
+  description: [WIP] Ansible Role to install presto-server-rpm
   # company: your company (optional)
 
   license: BSD
