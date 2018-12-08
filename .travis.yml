@@ -1,0 +1,17 @@
+language: python
+sudo: true
+python:
+  - "3.6"
+# - "3.7"
+install:
+  - pip3 install ansible ansible-lint
+before_script:
+  - ansible --version
+  # - sh ./test/before_script.sh
+script:
+  - ansible --version
+  - ansible-lint --version
+  - ansible-lint tasks/*.yml
+  # - ansible-playbook --syntax-check ./test/travis-ci-site.yml -i ./test/hosts
+  # - ansible-playbook ./test/travis-ci-site.yml -i ./test/hosts
+  # - sh ./test/test.sh
