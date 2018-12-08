@@ -1,7 +1,9 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+Ansible role to install prestodb/presto in CentOS.
+
+[![Platform](http://img.shields.io/badge/platform-centos-932279.svg?style=flat)](#)
 
 Requirements
 ------------
@@ -23,16 +25,11 @@ Example Playbook
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
-    - hosts: servers
+    - hosts: presto-server
       roles:
-         - { role: username.rolename, x: 42 }
+        - {role: presto, presto_client_install: true}
 
 License
 -------
 
 BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
