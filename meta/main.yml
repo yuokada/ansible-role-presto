@@ -30,7 +30,11 @@ galaxy_info:
     versions:
     - 7
 
-  galaxy_tags: []
+  galaxy_tags:
+    - database
+    - bigdata
+    - prestodb
+    - presto
 
 dependencies: []
 #  - role: frieder.oraclejdk
