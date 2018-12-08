@@ -1,0 +1,17 @@
+---
+# defaults file for presto
+# see: http://repo1.maven.org/maven2/com/facebook/presto/presto-server-rpm/maven-metadata.xml
+
+# Exec: wget -q "http://search.maven.org/remotecontent?filepath=com/facebook/presto/presto-server-rpm/$(PRESTO_VERSION)/presto-server-rpm-$(PRESTO_VERSION).rpm" -O presto-server-rpm-$(PRESTO_VERSION).rpm
+
+# Server
+presto_server_install: true
+presto_server_rpm_version: 0.212
+
+# Cli
+presto_client_install: false
+presto_client_version: 0.212
+presto_client_install_dst: /usr/local/bin/presto-cli
+
+# Catalog
+presto_catalog_install_memory_demo: true

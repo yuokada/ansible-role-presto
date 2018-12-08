@@ -1,0 +1,10 @@
+---
+# handlers file for presto
+- name: Start presto
+  command: /usr/lib/presto/bin/launcher start
+  listen: "Start presto"
+  # ignore_errors: True
+
+- name: Restart presto
+  command: /usr/lib/presto/bin/launcher restart
+  listen: "Restart presto"

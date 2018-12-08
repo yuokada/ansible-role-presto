@@ -1,0 +1,32 @@
+---
+- name: Download presto-server-rpm.rpm
+  get_url:
+    url: "http://search.maven.org/remotecontent?filepath=com/facebook/presto/presto-server-rpm/{{ presto_server_rpm_version }}/presto-server-rpm-{{ presto_server_rpm_version }}.rpm"
+    dest: "/tmp/presto-server-rpm-{{ presto_server_rpm_version }}.rpm"
+
+- name: Install presto-server-rpm
+  yum:
+    name: "/tmp/presto-server-rpm-{{ presto_server_rpm_version }}.rpm"
+    state: installed
+
+- name: Create directories
+  file:
+    path:  "{{ item.path }}"
+    state: directory
+    owner: root
+    group: root
+    mode:  0755
+  loop:
+    - { path: "/var/lib/presto/data" }
+    - { path: "/etc/presto/catalog" }
+    - { path: "/var/log/presto" }
+
+- name: Create files
+  template:
+    src:   "{{ item.src }}"
+    dest:  "{{ item.dest }}"
+    owner: root
+    group: root
+    mode:  0644
+  loop:
+    - { src: "env.sh.j2", dest: "/etc/presto/env.sh"}

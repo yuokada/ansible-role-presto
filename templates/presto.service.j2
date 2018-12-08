@@ -1,0 +1,17 @@
+[Service]
+PIDFile=/var/lib/presto/data/var/run/launcher.pid
+ExecStart=/usr/lib/presto/bin/launcher \
+  --launcher-log-file=/var/log/presto/launcher.log \
+  --server-log-file=/var/log/presto/server.log \
+  start
+ExecStop=/usr/lib/presto/bin/launcher kill
+Restart=<%= @restart %>
+RestartSec=<%= @restart_sec %>
+Type=forking
+User=presto
+Group=presto
+PrivateTmp=true
+LimitNOFILE=<%= @limit_no_file %>
+
+[Install]
+WantedBy = multi-user.target

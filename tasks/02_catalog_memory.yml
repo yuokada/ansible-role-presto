@@ -1,0 +1,9 @@
+---
+- name: Install memory_demo catalog catalog
+  template:
+    src:  catalog/memory_demo.properties.j2
+    dest: /etc/presto/catalog/memory_demo.properties
+    owner: root
+    group: root
+    mode: 0644
+  notify: Restart presto
