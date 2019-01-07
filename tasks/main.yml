@@ -1,21 +1,21 @@
 ---
 # tasks file for presto
 - name: Setup presto server
-  when: presto_server_install == true
+  when: presto_server_install
   block:
     - include: 01_presto_server.yml
   tags:
     - presto-server
 
 - name: Install memory catalog for demo
-  when: presto_catalog_install_memory_demo == true
+  when: presto_catalog_install_memory_demo
   block:
     - include: 02_catalog_memory.yml
   tags:
     - presto-server
 
 - name: Install presto-cli command
-  when: presto_client_install == true
+  when: presto_client_install
   block:
     - include: 01_presto_cli.yml
   tags:
