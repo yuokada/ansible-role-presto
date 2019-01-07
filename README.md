@@ -3,6 +3,7 @@ Role Name
 
 Ansible role to install prestodb/presto in CentOS.
 
+[![Build Status](https://travis-ci.com/yuokada/ansible-role-presto.svg?branch=master)](https://travis-ci.com/yuokada/ansible-role-presto)
 [![Platform](http://img.shields.io/badge/platform-centos-932279.svg?style=flat)](#)
 
 Requirements
