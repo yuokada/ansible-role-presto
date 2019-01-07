@@ -1,0 +1,8 @@
+parseable: true
+quiet: true
+skip_list:
+  - '204'
+# tags:
+#   - run_this_tag
+use_default_rules: true
+verbosity: 1
