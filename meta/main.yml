@@ -1,7 +1,7 @@
 galaxy_info:
   # see: https://galaxy.ansible.com/docs/contributing/creating_role.html
   role_name: presto
-  author: yukihiro Okada
+  author: Yukihiro Okada
   description: "[WIP] Ansible Role to install presto-server-rpm"
   # company: your company (optional)
 
@@ -37,13 +37,8 @@ galaxy_info:
     - presto
 
 dependencies:
- # - role: andrewrothstein.openjdk
- #   version: v2.0.2
- #   openjdk_app: jdk
 - role: lean_delivery.java
-  # version: 4.0.3
-  # transport: repositories
+  version: 4.0.3
   java_distribution: adoptopenjdk
-  transport: adoptopenjdk-fallback
+  transport: repositories
   java_major_version: 8
-  # java_minor_version: 212
