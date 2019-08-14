@@ -1,7 +1,7 @@
 ---
 - name: Install presto-cli command
   get_url:
-    url: "http://search.maven.org/remotecontent?filepath=com/facebook/presto/presto-cli/{{ presto_server_rpm_version }}/presto-cli-{{ presto_server_rpm_version }}-executable.jar"
+    url: "http://search.maven.org/remotecontent?filepath=io/prestosql/presto-cli/{{ presto_server_rpm_version }}/presto-cli-{{ presto_server_rpm_version }}-executable.jar"
     dest: "{{ presto_client_install_dst }}"
   tags:
     - presto-client

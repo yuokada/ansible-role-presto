@@ -1,7 +1,7 @@
 ---
 - name: Download presto-server-rpm.rpm
   get_url:
-    url: "http://search.maven.org/remotecontent?filepath=com/facebook/presto/presto-server-rpm/{{ presto_server_rpm_version }}/presto-server-rpm-{{ presto_server_rpm_version }}.rpm"
+    url: "http://search.maven.org/remotecontent?filepath=io/prestosql/presto-server-rpm/{{ presto_server_rpm_version }}/presto-server-rpm-{{ presto_server_rpm_version }}.rpm"
     dest: "/tmp/presto-server-rpm-{{ presto_server_rpm_version }}.rpm"
 
 - name: Install presto-server-rpm

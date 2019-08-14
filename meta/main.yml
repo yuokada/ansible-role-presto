@@ -36,5 +36,14 @@ galaxy_info:
     - prestodb
     - presto
 
-dependencies: []
-#  - role: frieder.oraclejdk
+dependencies:
+ # - role: andrewrothstein.openjdk
+ #   version: v2.0.2
+ #   openjdk_app: jdk
+- role: lean_delivery.java
+  # version: 4.0.3
+  # transport: repositories
+  java_distribution: adoptopenjdk
+  transport: adoptopenjdk-fallback
+  java_major_version: 8
+  # java_minor_version: 212

@@ -6,11 +6,11 @@
 
 # Server
 presto_server_install: true
-presto_server_rpm_version: 0.212
+presto_server_rpm_version: 316
 
 # Cli
-presto_client_install: false
-presto_client_version: 0.212
+presto_client_install: true
+presto_client_version: 316
 presto_client_install_dst: /usr/local/bin/presto-cli
 
 # Catalog
