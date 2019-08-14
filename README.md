@@ -22,7 +22,7 @@ A description of the settable variables for this role should go here, including 
 
 Dependencies
 ------------
-- [Ansible Galaxy](https://galaxy.ansible.com/lean_delivery/java)
+- [lean_delivery.java](https://galaxy.ansible.com/lean_delivery/java)
 
 Example Playbook
 ----------------

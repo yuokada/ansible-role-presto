@@ -38,7 +38,7 @@ galaxy_info:
 
 dependencies:
 - role: lean_delivery.java
-  version: 4.0.3
+  version: 4.3.0
   java_distribution: adoptopenjdk
   transport: repositories
   java_major_version: 8
